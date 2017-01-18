@@ -43,7 +43,7 @@ var container = document.createElement('div');
 
 generateBlocks();
 
-var elements = container.getElementsByClassName('elements');
+var elements = container.querySelectorAll('.elements');
 
 changeColor();
 
@@ -111,6 +111,7 @@ function changeColor() {
         })(k), time);
     }
 }
+
 
 
 
