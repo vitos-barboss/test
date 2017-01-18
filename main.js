@@ -102,13 +102,15 @@ function changeColor() {
 
         var time = elements[k].parentElement.getAttribute('time');
 
-        setInterval((function (kFrozen) {
+        var tmp = (function (kFrozen) {
 
             return function () {
                 elements[kFrozen].style.backgroundColor = randomHexColor();
             }
 
-        })(k), time);
+        })(k);
+
+        setInterval(tmp, time);
     }
 }
 
